@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "gjU3u1UPd2Qie4KQXyUaeyz3SCDrK9dSpgN9PAGi+FCT74pAmIBqa6ANL14/KOBrbyTNhYRmykEfYo2wJc+q2Q==",
+  "success": true,
+  "projectFilePath": "/home/nedimdju/mistral-training/Jap_task_api_refactored/JapBackend.Api/JapBackend.Api.csproj",
+  "expectedPackageFiles": [
+    "/home/nedimdju/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/nedimdju/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/nedimdju/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/home/nedimdju/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/home/nedimdju/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/home/nedimdju/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
