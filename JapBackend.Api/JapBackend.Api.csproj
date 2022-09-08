@@ -10,4 +10,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JapBackend.Common\JapBackend.Common.csproj" />
+    <ProjectReference Include="..\JapBackend.Core\JapBackend.Core.csproj" />
+    <ProjectReference Include="..\JapBackend.Database\JapBackend.Database.csproj" />
+    <ProjectReference Include="..\JapBackend.Repositories\JapBackend.Repositories.csproj" />
+    <ProjectReference Include="..\JapBackend.Services\JapBackend.Services.csproj" />
+  </ItemGroup>
+
 </Project>

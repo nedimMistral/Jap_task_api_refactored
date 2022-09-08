@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using JapBackend.Core.Entities.Base;
+using Microsoft.AspNetCore.Identity;
 
 namespace JapBackend.Core.Entities
 {
-    public class User : AuditableEntity
+    public class User : IdentityUser<int>
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
