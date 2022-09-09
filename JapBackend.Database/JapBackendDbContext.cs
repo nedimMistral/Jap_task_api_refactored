@@ -23,11 +23,6 @@ namespace JapBackend.Database
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<RecipeIngredient>()
-                .HasOne(r => r.Recipe)
-                    .WithMany(ri => ri.RecipeIngredients)
-                        .HasForeignKey(ri => ri.RecipeId);
-
             DataSeeder.CategoriesSeed.Seed(builder);
             DataSeeder.IngredientsSeed.Seed(builder);
         }
