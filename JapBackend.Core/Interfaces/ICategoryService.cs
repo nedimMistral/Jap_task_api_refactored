@@ -8,6 +8,6 @@ namespace JapBackend.Core.Interfaces
 {
     public interface ICategoryService
     {
-        Task<List<CategoriesDto>> Get(int n);
+        Task<List<CategoryDto>> Get(int n);
     }
 }

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using JapBackend.Core.Entities;
-using JapBackend.Core.Requests.Category;
+using JapBackend.Core.Requests.User;
 
 namespace JapBackend.Core.Interfaces.Repositories
 {
-    public interface ICategoryRepository : IAsyncRepository<Category, CategorySearchRequest, CategoryInsertRequest, CategoryUpdateRequest, CategoryDto>
+    public interface IUserRepository : IAsyncRepository<User, UserSearchRequest, UserInsertRequest, UserUpdateRequest, UserDto>
     {
     }
 }

@@ -20,7 +20,7 @@ namespace JapBackend.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public Task<List<CategoriesDto>> Get(int n)
+        public Task<List<CategoryDto>> Get(int n)
         {
             throw new NotImplementedException();
         }

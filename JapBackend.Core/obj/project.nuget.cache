@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yVVVSkOrf+XEHeaGcH6pG0wfvbisUuy72GvuLP9fN+RURw2/ZlWNCHw0M4TpwHBJIezw40EAaNb3ghWvV+3KEA==",
+  "dgSpecHash": "RHuk32P88uuKr2Jl1lRKZQ+Yx6s5a8vOn2uo3mBwBeHINrKaIaMDTS0FcGs8hRqbxcUEbW82Qcfsi1GXPupJNQ==",
   "success": true,
   "projectFilePath": "/home/nedimdju/mistral-training/Jap_task_api_refactored/JapBackend.Core/JapBackend.Core.csproj",
   "expectedPackageFiles": [
+    "/home/nedimdju/.nuget/packages/automapper/11.0.1/automapper.11.0.1.nupkg.sha512",
     "/home/nedimdju/.nuget/packages/fluentvalidation/11.2.1/fluentvalidation.11.2.1.nupkg.sha512",
     "/home/nedimdju/.nuget/packages/fluentvalidation.aspnetcore/11.2.1/fluentvalidation.aspnetcore.11.2.1.nupkg.sha512",
     "/home/nedimdju/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.0/fluentvalidation.dependencyinjectionextensions.11.2.0.nupkg.sha512",
@@ -24,6 +25,7 @@
     "/home/nedimdju/.nuget/packages/microsoft.aspnetcore.identity/2.2.0/microsoft.aspnetcore.identity.2.2.0.nupkg.sha512",
     "/home/nedimdju/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/6.0.8/microsoft.aspnetcore.identity.entityframeworkcore.6.0.8.nupkg.sha512",
     "/home/nedimdju/.nuget/packages/microsoft.aspnetcore.webutilities/2.2.0/microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
+    "/home/nedimdju/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/nedimdju/.nuget/packages/microsoft.entityframeworkcore/6.0.8/microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
     "/home/nedimdju/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.8/microsoft.entityframeworkcore.abstractions.6.0.8.nupkg.sha512",
     "/home/nedimdju/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.8/microsoft.entityframeworkcore.analyzers.6.0.8.nupkg.sha512",

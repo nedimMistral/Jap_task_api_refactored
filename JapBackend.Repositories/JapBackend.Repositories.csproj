@@ -1,5 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\JapBackend.Common\JapBackend.Common.csproj" />
+    <ProjectReference Include="..\JapBackend.Core\JapBackend.Core.csproj" />
+    <ProjectReference Include="..\JapBackend.Database\JapBackend.Database.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
