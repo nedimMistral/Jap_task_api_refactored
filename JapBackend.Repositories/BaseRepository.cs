@@ -121,6 +121,20 @@ namespace JapBackend.Repositories
             return result;
         }
 
+        public async Task<List<TDto>> GetAllAsync()
+        {
+            var res = await _dbContext.Set<TEntity>().ToListAsync();
+
+            return _mapper.Map<List<TDto>>(res);
+        }
+
+        public async Task<List<TDto>> GetAllWithLimitAsync(int n)
+        {
+            var res = await _dbContext.Set<TEntity>().Take(n).ToListAsync();
+
+            return _mapper.Map<List<TDto>>(res);
+        }
+        
         public async Task SaveChangesAsync()
         {
             throw new NotImplementedException();

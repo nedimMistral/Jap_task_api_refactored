@@ -18,5 +18,8 @@ namespace JapBackend.Core.Interfaces.Repositories
         Task DeleteAsync(object id, bool saveChanges = true);
         Task SoftDeleteAsync(object id, bool saveChanges = true);
         Task SaveChangesAsync();
+
+        Task<List<TDto>> GetAllAsync();
+        Task<List<TDto>> GetAllWithLimitAsync(int n);
     }
 }
