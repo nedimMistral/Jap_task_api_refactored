@@ -9,20 +9,19 @@ using Microsoft.AspNetCore.Http;
 
 namespace JapBackend.Services
 {
-    public class CategoryService : ICategoryService
+    public class CategoriesService : ICategoriesService
     {
         private readonly ICategoryRepository _categoryRepository;
         private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public CategoryService(ICategoryRepository categoryRepository, IHttpContextAccessor httpContextAccessor)
+        public CategoriesService(ICategoryRepository categoryRepository, IHttpContextAccessor httpContextAccessor)
         {
             _categoryRepository = categoryRepository;
             _httpContextAccessor = httpContextAccessor;
         }
-
-        public Task<List<CategoryDto>> Get(int n)
+        public async Task<List<CategoryDto>> Get(int n)
         {
-            throw new NotImplementedException();
+            return await _categoryRepository.GetAllWithLimitAsync(n);
         }
     }
 }

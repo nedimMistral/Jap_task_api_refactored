@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using JapBackend.Core.Requests.Category;
+using JapBackend.Core.Requests.Ingredient;
 
 namespace JapBackend.Core.Interfaces
 {
-    public interface ICategoryService
+    public interface IIngredientsService
     {
-        Task<List<CategoryDto>> Get(int n);
+        Task<List<IngredientDto>> Get();
     }
 }

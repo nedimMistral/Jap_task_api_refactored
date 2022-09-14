@@ -15,7 +15,7 @@ namespace JapBackend.Api.Extensions
             service.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             service.AddTransient<IAuthService, AuthService>();
-            service.AddTransient<ICategoryService, CategoryService>();
+            service.AddTransient<ICategoriesService, CategoriesService>();
 
             // service.AddTransient<ICategoryRepository, CategorRepository>();
         }
