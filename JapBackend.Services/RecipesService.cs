@@ -13,16 +13,35 @@ namespace JapBackend.Services
     {
         private readonly IRecipesRepository _recipesRepository;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IRecipeCostService _recipeCostService;
 
-        public RecipesService(IRecipesRepository recipesRepository, IHttpContextAccessor httpContextAccessor)
+        public RecipesService(IRecipesRepository recipesRepository, IHttpContextAccessor httpContextAccessor, IRecipeCostService recipeCostService)
         {
             _recipesRepository = recipesRepository;
             _httpContextAccessor = httpContextAccessor;
+            _recipeCostService = recipeCostService;
+        }
+
+        public Task<RecipeDto> Details(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<RecipeDto>> GetRecipesByCategory(int categoryId, int n)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<RecipeDto> InsertRecipe(RecipeInsertRequest request)
         {
+            request.Price = _recipeCostService.CalculatePrice(request.RecipeIngredients);
+            
             return await _recipesRepository.AddAsync(request);
+        }
+
+        public Task<List<RecipeDto>> SearchRecipes(string searchTerm, int index, int categoryId)
+        {
+            throw new NotImplementedException();
         }
     }
 }
