@@ -8,6 +8,6 @@ namespace JapBackend.Core.Requests.Recipe
 {
     public class RecipeSearchRequest : BaseSearch
     {
-        
+        public int? CategoryId { get; set; }
     }
 }

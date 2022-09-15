@@ -22,9 +22,9 @@ namespace JapBackend.Services
             _recipeCostService = recipeCostService;
         }
 
-        public Task<RecipeDto> Details(int id)
+        public async Task<RecipeDto> Details(int id)
         {
-            throw new NotImplementedException();
+            return await _recipesRepository.GetByIdAsync(id);
         }
 
         public Task<List<RecipeDto>> GetRecipesByCategory(int categoryId, int n)
