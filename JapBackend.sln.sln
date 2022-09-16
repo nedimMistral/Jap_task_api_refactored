@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JapBackend.Repositories", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JapBackend.Services", "JapBackend.Services\JapBackend.Services.csproj", "{05C5B66D-02F2-430A-9659-BDA9B8C37346}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JapBackend.Services.Tests", "JapBackend.Services.Tests\JapBackend.Services.Tests.csproj", "{9119873A-8C21-4EE4-8B34-1002EA81B31D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,13 @@ Global
 		{05C5B66D-02F2-430A-9659-BDA9B8C37346}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05C5B66D-02F2-430A-9659-BDA9B8C37346}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05C5B66D-02F2-430A-9659-BDA9B8C37346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42FEA9D2-202D-464E-B885-8F1694D38F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42FEA9D2-202D-464E-B885-8F1694D38F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42FEA9D2-202D-464E-B885-8F1694D38F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42FEA9D2-202D-464E-B885-8F1694D38F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9119873A-8C21-4EE4-8B34-1002EA81B31D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9119873A-8C21-4EE4-8B34-1002EA81B31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9119873A-8C21-4EE4-8B34-1002EA81B31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9119873A-8C21-4EE4-8B34-1002EA81B31D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
