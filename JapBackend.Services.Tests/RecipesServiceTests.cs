@@ -24,8 +24,6 @@ namespace JapBackend.Services.Tests
         private Mock<HttpContextAccessor> mockHttpCtx;
         private Mock<RecipeCostService> mockRecipeCostService;  
 
-
-
         public void Setup()
         {
             _options = new DbContextOptionsBuilder<JapBackendDbContext>().UseInMemoryDatabase(databaseName: "TestDB").Options;
