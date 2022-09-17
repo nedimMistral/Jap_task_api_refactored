@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using JapBackend.Common;
 using JapBackend.Core.Entities;
+using JapBackend.Core.Requests.Recipe;
+using JapBackend.Core.Requests.RecipeIngredient;
 using JapBackend.Database;
 using JapBackend.Repositories;
 using Microsoft.AspNetCore.Http;
@@ -23,8 +25,6 @@ namespace JapBackend.Services.Tests
         private Mock<IMapper> mockMapper;
         private Mock<HttpContextAccessor> mockHttpCtx;
         private Mock<RecipeCostService> mockRecipeCostService;  
-
-
 
         public void Setup()
         {
@@ -74,12 +74,55 @@ namespace JapBackend.Services.Tests
                 },
                 new Ingredient{
                     Id = 3,
-                    Name = "Raising",
+                    Name = "Raisins",
                     UnitOfMeasure = UOM.gram,
                     UnitPrice = 0.1,
                 }
             );
             _dbContext.SaveChanges();
+        }
+
+        public async Task InsertRecipe_Pass()
+        {
+            var req = new RecipeInsertRequest
+            {
+                Title = "Test recipe",
+                Description = "Test recipe description",
+                CategoryId = 0,
+                UserId = 0,
+                RecipeIngredients = new List<RecipeIngredientDto> {
+                    new RecipeIngredientDto 
+                    {
+                        IngredientName = "Eggs",
+                        IngredientId = 1,
+                        Quantity = 3,
+                        Price = 0.3,
+                    },
+                    new RecipeIngredientDto 
+                    {
+                        IngredientName = "Raisins",
+                        IngredientId = 3,
+                        Quantity = 20,
+                        Price = 0.1,
+                    },
+                    new RecipeIngredientDto 
+                    {
+                        IngredientName = "All-purpose flour",
+                        IngredientId = 2,
+                        Quantity = 100,
+                        Price = 0.01,
+                    }
+                }
+            };
+
+            await _recipesService.InsertRecipe(req);
+
+            Recipe record = await _dbContext.Recipes.FirstOrDefaultAsync(x => x.Title == req.Title);
+
+            Assert.That(record.RecipeIngredients, Is.Unique);
+            Assert.That(record.RecipeIngredients.Count, Is.EqualTo(3));
+            Assert.That(record.RecipeIngredients.First().IngredientId, Is.EqualTo(req.RecipeIngredients.First().IngredientId));
+
         }
     }
 }
