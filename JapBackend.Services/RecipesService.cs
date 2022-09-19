@@ -34,6 +34,9 @@ namespace JapBackend.Services
 
         public async Task<RecipeDto> InsertRecipe(RecipeInsertRequest request)
         {
+            if (request.RecipeIngredients.Count() == 0) 
+                throw new Exception("Cannot create recipe; no ingredients");
+
             request.Price = _recipeCostService.CalculatePrice(request.RecipeIngredients);
             
             return await _recipesRepository.AddAsync(request);

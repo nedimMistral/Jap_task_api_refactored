@@ -26,6 +26,7 @@ namespace JapBackend.Services.Tests
         private Mock<HttpContextAccessor> mockHttpCtx;
         private Mock<RecipeCostService> mockRecipeCostService;  
 
+        [OneTimeSetUp]
         public void Setup()
         {
             _options = new DbContextOptionsBuilder<JapBackendDbContext>().UseInMemoryDatabase(databaseName: "TestDB").Options;
@@ -82,6 +83,7 @@ namespace JapBackend.Services.Tests
             _dbContext.SaveChanges();
         }
 
+        [Test]
         public async Task InsertRecipe_Pass()
         {
             var req = new RecipeInsertRequest
@@ -122,7 +124,23 @@ namespace JapBackend.Services.Tests
             Assert.That(record.RecipeIngredients, Is.Unique);
             Assert.That(record.RecipeIngredients.Count, Is.EqualTo(3));
             Assert.That(record.RecipeIngredients.First().IngredientId, Is.EqualTo(req.RecipeIngredients.First().IngredientId));
-
         }
+
+        [Test]
+        public async Task Test_NoIgredientsThrowsException()
+        {
+            var req = new RecipeInsertRequest
+            {
+                Title = "No ingredients",
+                Description = "Test recipe without ingredients",
+                CategoryId = 0,
+                UserId = 0,
+                RecipeIngredients = new List<RecipeIngredientDto> {}
+            };
+
+            Assert.Throws<Exception>(async () => await _recipesService.InsertRecipe(req));
+        }
+
+
     }
 }
