@@ -14,17 +14,17 @@ namespace JapBackend.Api.Controllers
     [Route("api/[controller]")]
     public class CategoriesController : ControllerBase
     {
-        private readonly ICategoriesService _categorySvc;
+        private readonly ICategoriesService _categoriesService;
 
-        public CategoriesController(ICategoriesService categorySvc)
+        public CategoriesController(ICategoriesService categoriesService)
         {
-            _categorySvc = categorySvc;
+            _categoriesService = categoriesService;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<CategoryDto>>> Get([FromQuery] int n)
         {
-            return Ok(await _categorySvc.Get(n));
+            return Ok(await _categoriesService.Get(n));
         }
 
     }
